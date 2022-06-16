@@ -9,7 +9,7 @@ use Laravel\Scout\Searchable;
 class houseandlot extends Model
 {
     use HasFactory;
-    // use Searchable;
+    use Searchable;
     protected $fillable = [
         'property_id',
         'livingroom',

@@ -8,7 +8,7 @@ use Laravel\Scout\Searchable;
 class boardinghouse extends Model
 {
     use HasFactory;
-    // use Searchable;
+    use Searchable;
     protected $fillable = [
         'property_id',
         'bed',

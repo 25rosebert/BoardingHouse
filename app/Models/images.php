@@ -8,7 +8,7 @@ use Laravel\Scout\Searchable;
 class images extends Model
 {
     use HasFactory;
-    // use Searchable;
+    use Searchable;
     protected $fillable = [
         'property_id',
         'images'

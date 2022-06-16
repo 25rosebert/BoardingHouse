@@ -8,7 +8,7 @@ use Laravel\Scout\Searchable;
 class category extends Model
 {
     use HasFactory;
-    // use Searchable;
+    use Searchable;
     protected $fillable = [
         'name',
         'slug',

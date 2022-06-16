@@ -8,7 +8,7 @@ use Laravel\Scout\Searchable;
 class classification extends Model
 {
     use HasFactory;
-    // use Searchable;
+    use Searchable;
     protected $fillable = [
         'type'
     ];
