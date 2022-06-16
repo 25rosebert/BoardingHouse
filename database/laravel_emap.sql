@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 13, 2022 at 04:48 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 7.4.19
+-- Generation Time: Jun 16, 2022 at 06:35 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `laravel_mapping`
+-- Database: `laravel_emap`
 --
 
 -- --------------------------------------------------------
@@ -98,15 +98,6 @@ CREATE TABLE `boardinghouses` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `boardinghouses`
---
-
-INSERT INTO `boardinghouses` (`id`, `property_id`, `bed`, `rooms`, `comfortroom`, `kitchen`, `livingroom`, `floor_total`, `floor_area`, `created_at`, `updated_at`) VALUES
-(27, 104, 30, 8, 8, 8, 2, 2, 560, '2022-01-12 08:00:15', '2022-01-12 08:00:15'),
-(28, 105, 24, 4, 4, 4, 4, 2, 430, '2022-01-12 08:05:20', '2022-01-12 08:05:20'),
-(29, 106, 39, 20, 20, 20, 4, 4, 1000, '2022-01-12 08:14:02', '2022-01-12 08:14:02');
 
 -- --------------------------------------------------------
 
@@ -210,15 +201,6 @@ CREATE TABLE `houseandlots` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `houseandlots`
---
-
-INSERT INTO `houseandlots` (`id`, `property_id`, `bedroom`, `comfortroom`, `kitchen`, `livingroom`, `floor_area`, `floor_total`, `parking_lot`, `land_size`, `created_at`, `updated_at`) VALUES
-(26, 103, 3, 2, 2, 1, 356, 2, 1, 3500.00, '2022-01-12 07:55:17', '2022-01-12 07:55:17'),
-(27, 107, 3, 3, 2, 3, 450, 2, 1, 560.00, '2022-01-12 08:24:24', '2022-01-12 08:24:24'),
-(28, 108, 7, 4, 3, 2, 435, 2, 1, 543.00, '2022-01-12 08:31:11', '2022-01-12 08:31:11');
-
 -- --------------------------------------------------------
 
 --
@@ -232,15 +214,6 @@ CREATE TABLE `images` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `images`
---
-
-INSERT INTO `images` (`id`, `property_id`, `images`, `created_at`, `updated_at`) VALUES
-(106, 107, '1642004665_house.jpg', '2022-01-12 08:24:25', '2022-01-12 08:24:25'),
-(107, 108, '1642005071_bhouse.jpg', '2022-01-12 08:31:11', '2022-01-12 08:31:11'),
-(108, 109, '1642005289_lot.jpg', '2022-01-12 08:34:49', '2022-01-12 08:34:49');
 
 -- --------------------------------------------------------
 
@@ -259,20 +232,6 @@ CREATE TABLE `locations` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `locations`
---
-
-INSERT INTO `locations` (`id`, `property_id`, `address`, `latitude`, `longitude`, `landmarks`, `created_at`, `updated_at`) VALUES
-(87, 101, 'Marcos Avenue, Poblacion, Alaminos City, Pangasinan, Poblacion, Alaminos, Pangasinan, Philippines', '16.15552898', '119.98208094', 'Vinz Ihaw-ihaw Resto, Alaminos Market Vendors Multi-Purpose Cooperative, J&T Express', '2022-01-12 07:47:51', '2022-01-12 07:47:51'),
-(88, 103, '5X2P+669, Poblacion, Alaminos, Pangasinan, Philippines', '16.15050000', '119.98560000', 'Domondon Store, JVR RSDNC', '2022-01-12 07:55:17', '2022-01-12 07:55:17'),
-(89, 104, '4X79+W8 Alaminos, Pangasinan, Philippines', '16.11479882', '119.96830512', 'Pangasinan State University – Alaminos Campus, Mamas Love Canteen, Calvary Baptist Church', '2022-01-12 08:00:14', '2022-01-12 08:00:14'),
-(90, 105, 'BCRD Building, Olongapo - Bugallon Rd, Alaminos, Pangasinan, Philippines', '16.11624183', '119.96886838', 'J\'s Ala Eh Lomihan & Food House, Kap\'s Food House, Pangasinan State University – Alaminos Campus', '2022-01-12 08:05:19', '2022-01-12 08:05:19'),
-(91, 106, '4X78+VQM, Alaminos, Pangasinan, Philippines', '16.11413400', '119.96669043', 'Pangasinan State University – Alaminos Campus, Reyes Boarding House, Alaminos Heights Subdivision', '2022-01-12 08:14:02', '2022-01-12 08:14:02'),
-(92, 107, '2404 Braganza Street, Poblacion, Alaminos, Pangasinan, Philippines', '16.15802281', '119.97869063', 'PhilHealth Regional Office - Alaminos, Pangasinan, CSI Warehouse Club Parking Lot, 7-Eleven', '2022-01-12 08:24:22', '2022-01-12 08:24:22'),
-(93, 108, '6 V. Ungson St, Poblacion, Alaminos, Pangasinan, Philippines', '16.15379255', '119.98560536', 'Lola Lita Store, Texas Lodge, Pangasinan 1st District Engineering Office, Bos Jef BUILDERS ang Enterprises construction supply', '2022-01-12 08:31:11', '2022-01-12 08:31:11'),
-(94, 109, '244 Alaminos - Bani Rd, Alaminos, Pangasinan, Philippines', '16.16591630', '119.95673943', 'REATE\'S EATERY, ReyZel Store, Romantic Samgyupsal', '2022-01-12 08:34:49', '2022-01-12 08:34:49');
-
 -- --------------------------------------------------------
 
 --
@@ -286,14 +245,6 @@ CREATE TABLE `lots` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `lots`
---
-
-INSERT INTO `lots` (`id`, `property_id`, `land_size`, `created_at`, `updated_at`) VALUES
-(31, 101, 2543.0000, '2022-01-12 07:47:52', '2022-01-12 07:47:52'),
-(32, 109, 1000.0000, '2022-01-12 08:34:49', '2022-01-12 08:34:49');
 
 -- --------------------------------------------------------
 
@@ -392,6 +343,7 @@ CREATE TABLE `password_resets` (
 --
 
 INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('rose@admin.com', '$2y$10$HlPp2KqRADzzv8v3D6hJrujdZBbz55YurDEEC4SiVAdOfyoZ9Ieeq', '2022-01-12 19:25:44'),
 ('rose@admin.com', '$2y$10$HlPp2KqRADzzv8v3D6hJrujdZBbz55YurDEEC4SiVAdOfyoZ9Ieeq', '2022-01-12 19:25:44');
 
 -- --------------------------------------------------------
@@ -435,20 +387,6 @@ CREATE TABLE `properties` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `properties`
---
-
-INSERT INTO `properties` (`id`, `barangay_id`, `name`, `price`, `description`, `business_permit`, `image`, `status`, `category_id`, `classification_id`, `phone`, `user_id`, `created_at`, `updated_at`) VALUES
-(101, 40, 'Joshua Residential Lot', 34422242, 'located at barangay poblacion', NULL, '1642002469_lot.jpg', 4, 3, 1, 639453245334, 3, '2022-01-12 07:47:49', '2022-01-12 07:47:49'),
-(103, 64, 'Bria Homes', 26000000, 'bria homes is located at barangay pocal pocal.', NULL, '1642002917_briahome.jpg', 4, 1, 1, 639453245334, 3, '2022-01-12 07:55:17', '2022-01-12 07:55:17'),
-(104, 46, 'Reyes Boarding House', 900, 'green boarding house nearby PSU ACC and at C.O.R.E Clinic', '1642003213_business permit.jpg', '1642003214_bhouse.jpg', 4, 2, 2, 639453245334, 3, '2022-01-12 08:00:14', '2022-01-12 08:00:14'),
-(105, 46, 'C and A Building', 1000, 'C and A building is located at the side of BCRD bolaney', '1642003518_business permit.jpg', '1642003518_20211217_152936.jpg', 4, 2, 2, 639453245334, 3, '2022-01-12 08:05:18', '2022-01-12 08:05:18'),
-(106, 46, 'Payas Dormitory', 1200, 'Orange building is located at back of PSU Alaminos City', '1642004031_business permit.jpg', '1642004032_apartment.jpg', 4, 2, 2, 639453245334, 3, '2022-01-12 08:13:52', '2022-01-12 08:13:52'),
-(107, 63, 'Lumina Homes', 3024532, 'lumina homes two storey building', NULL, '1642004658_lumina.jpg', 4, 1, 1, 639361266245, 57, '2022-01-12 08:24:18', '2022-01-12 08:24:18'),
-(108, 63, 'Residential House', 3043482, 'this is a residential house and lot', NULL, '1642005068_boarding house - Copy.jpg', 4, 1, 1, 639361266245, 57, '2022-01-12 08:31:08', '2022-01-12 08:31:08'),
-(109, 65, 'Juans Commercial Lot', 3000000, 'the lot is about a thousand square meters and can be located at barangay pogo alaminos city', NULL, '1642005284_lot.jpg', 4, 3, 1, 639361266245, 57, '2022-01-12 08:34:44', '2022-01-12 08:34:44');
-
 -- --------------------------------------------------------
 
 --
@@ -465,14 +403,6 @@ CREATE TABLE `reports` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `reports`
---
-
-INSERT INTO `reports` (`id`, `property_id`, `name`, `report_type`, `description`, `offense_count`, `created_at`, `updated_at`) VALUES
-(44, 107, 'Rose Bert', 'Fake Property, Fake Property, Fake Property, Fake User', 'the property is fake, the property is not located at the same area, the property is unreal, thse user uses the fake user', 4, '2022-01-12 08:44:01', '2022-01-12 17:43:01'),
-(45, 103, 'Joshua Sebastian', 'Wrong Information', 'the property has a wrong information', 1, '2022-01-12 18:15:18', '2022-01-12 18:15:18');
 
 -- --------------------------------------------------------
 
@@ -525,29 +455,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `verified`, `password`, `picture`, `role_as`, `remember_token`, `created_at`, `updated_at`, `username`, `contact_number`) VALUES
 (1, 'Rose Bert Thumbolista Cantillo', 'bertcantillo@gmail.com', '2021-10-07 01:03:56', 1, '$2y$10$ifg6rd0qQOnEsI66REiY/OqqpsjsAIJDOf47iUKxm/Glt4Y7osHu.', 'UIMG_2021121961bf0cf03c078.jpg', '1', 'TfF2858tFj5ufRtobOVO72vrnOJw863T7CWzkDkaC55LYYoB3R2F3h4GIDsK', '2021-09-22 00:48:36', '2021-12-19 02:45:42', 'bertcantillo', 9563526834),
 (2, 'valeriiiii berbo', 'valerie@gmail.com', '2021-10-07 04:35:07', 0, '$2y$10$Wp.uiVXESoKNJTuZiZy4cuwMoVXKgLXOsEjO7wPyXTma5eSljo8/6', 'UIMG_20211122619b596b2cdef.jpg', '0', 'gNakhpPqbD0EnBuOoa3ZqHutMArfaNplFu87kMVOyolKHHmZq9BXs2v6fq5D', '2021-09-22 01:09:49', '2021-11-22 00:48:43', 'valerie', 639563526833),
-(3, 'Joshua Sebastian', 'joshuasebastian@gmail.com', '2021-10-07 01:14:23', 1, '$2y$10$/.gtL7PZ3PQ0jrlBZlDg/egOT7nt1Esev4UDAgej6VP7BgDZD4k4q', 'UIMG_20211111618c98d9e6984.jpg', '0', 'Y3DMjtVaNHm7STA5zpA4W2BUtBuZ5jEW0e7jQEHwGY50HB2SqpY5CrKY2o7y', '2021-09-22 16:09:00', '2021-12-27 21:26:45', 'Joshua', 639453245334),
-(4, 'Joffrey Mapa', 'jopmapa@mapa.com', NULL, 0, '$2y$10$D3lh7qxGBjxIp7IG4r4wgep6hqPXTE2P4nOoE8YiQmxq3N.Tcff6W', NULL, '0', NULL, '2021-10-05 04:17:00', '2021-10-05 04:17:00', 'jopaymapa', 639353563453),
 (53, 'Bert Cantillo', 'bertthumbolista@gmail.com', '2021-12-28 18:55:02', 0, '$2y$10$Gwq.7RxnWplZOZoR5/YzIuqKUZYC7Y0QxuKn7hkbp6/V7HWVxRHiW', NULL, '0', NULL, '2021-10-07 00:46:02', '2021-12-28 18:55:02', 'thumbolista', 639563526835),
-(57, 'Rose Bert', 'rose@admin.com', '2021-10-16 18:20:58', 1, '$2y$10$omc.WyzC9g32Az.XvnJnAO55xC9Z5JIIAZjxeqtp1emuzBCJxD76i', '8711634437076_avatar.png', '1', 'C9IvyL6OqSI96trk6rYqzC9uLIcXPanqhQ9Kn4WEsxy4XIhIAX2brQPfuLPa', '2021-10-16 18:17:57', '2021-12-01 09:03:11', 'rose bert', 639361266245),
-(61, 'Doods Sagabaen', 'sagabaendoods@user.com', '2021-11-28 20:22:48', 1, '$2y$10$F6t6E7IyQ4MkU4JptakcqeBTeOD7/1u8Nv2L.iq38ttQ5i5quBGWi', '323271638158548_avatar.png', '0', 'yY2zjR4ffQEv5PHxDFu555cjfBLWOcUBFrSohX4P0NZihBJKMmCQtiTILLkV', '2021-11-28 20:02:29', '2021-12-27 21:21:02', 'wewewewew', 639564352345),
-(66, 'king buenaflor', 'king@user.com', NULL, 0, '$2y$10$7yaI5u/8ypnoiX9wBiKbW.1EezrAumErirx2GRPFQNnVE1GLQmSbi', '143201638188661_avatar.png', '0', NULL, '2021-11-29 04:24:22', '2021-11-29 04:24:22', 'kingkong', 639563453475),
-(68, 'Tisoy Cortez', 'tisoycortez@gmail.com', '2021-12-03 16:54:18', 1, '$2y$10$no55cTEWcRDaG2TChFyikO.zQCL/DlJhsqNIeRf8m1Za4iChELXQ6', '301941638578351_avatar.png', '0', NULL, '2021-12-03 16:39:11', '2022-01-05 18:44:13', 'soyti', 639755357524),
-(69, 'Leslyne Montemayor', 'motemayorles@gmail.com', '2021-12-03 19:55:02', 0, '$2y$10$iIKv/o2s10Yu41EnZFyhJegdB77WO40aiwu0/HQ0ZWxpMdpyWMqdu', '221401638579668_avatar.png', '0', 'u8A4V3v30GDabh5kBZOuwlPgYXbTmGzGtjPlvviiVeyzjLhgaaeFHr4WOloD', '2021-12-03 17:01:09', '2021-12-03 19:55:02', 'leslyne', 639543452642),
-(70, 'Celia S. Basco', 'yangbasco@gmail.com', '2021-12-05 18:57:56', 0, '$2y$10$G6YmO.6oENikMMrB5qFH/Otfh1xnItBx9GcF9vu2LNg3J0ivcCifW', '56771638758501_avatar.png', '0', 'NI4vPIRNq1elnZbcLEybFfHyYAwHqIDFcAVlC9gK4R2xCyGY8RMHgdcCrmMe', '2021-12-05 18:41:42', '2021-12-05 18:57:56', 'yang', 639052472437),
-(71, 'melen', 'mylinemontemayor123@gmail.com', NULL, 0, '$2y$10$NF9CLNW7YgybBFBKLdzOVuDdtD/JeFOTKm0V/YJ/dVYClMy0o2zk.', '222701638769112_avatar.png', '0', 'Dqd23Z1RxO2fLrwAfsWFHRG3fobthOD70XWEw2NDOfcQALOgjxurajqRjxO2', '2021-12-05 21:38:35', '2021-12-05 21:38:35', 'mylinemontemayor123@gmail.com', 639122960911),
-(73, 'chan', 'christiandumaran1999@gmail.com', NULL, 0, '$2y$10$hwEDxbnX5cgitbu9/FQsQ.TUkgGnkMXvRm8EU6Iwss.E9SPVtBJWa', '217571638777668_avatar.png', '0', NULL, '2021-12-06 00:01:08', '2021-12-06 00:01:08', 'chanong09', 639123456782),
-(74, 'Maurene Joy', 'realinmaurene@gmail.com', '2021-12-06 00:19:34', 0, '$2y$10$tSTJhV4lTslcRc.w9Evs8Ote8wfv.nQZqunurR3CkwfOeNvN//t0G', '131471638778604_avatar.png', '0', '2OlQtpqJriuw4j9FcgVFbdSJtBAuNiVRPu3WgKXqoYpb5CEAgf12I3vMY7H4', '2021-12-06 00:16:44', '2021-12-06 00:19:34', 'mauuuuu', 639123456789),
-(75, 'Patrick Rausa', 'rausa.patrick@gmail.com', '2021-12-06 00:49:21', 0, '$2y$10$eEMFZZDm/42.B3LWZeW09OT5iQEEh5jS47iL/rJ/tGBhNsRaE7OcW', '314941638780442_avatar.png', '0', NULL, '2021-12-06 00:47:22', '2021-12-06 00:49:21', 'bosspatttt', 639361232243),
-(76, 'eric daragay', 'ddericmercado@gmail.com', '2021-12-06 06:38:01', 0, '$2y$10$3lZ5QgnEe852RgSGIqPbwOdmzOusfjY9IUQ.gkbHOacthu6piUgUu', '205731638801349_avatar.png', '0', NULL, '2021-12-06 06:35:49', '2021-12-06 06:38:01', 'daragay', 639807891021),
-(77, 'Niel Patrick Morano', 'nielmorano@gmail.com', NULL, 0, '$2y$10$5BHClu.3oC1iNwdvptswNuD54bE02nhM1tHrl6Pcxrdy9Ruh4qgkG', '283821639411042_avatar.png', '0', NULL, '2021-12-13 07:57:23', '2021-12-13 07:57:23', 'niel patrick', 639065544937),
-(78, 'Michellyn Itliong', 'michellynitliong@gmail.com', '2021-12-16 05:10:43', 0, '$2y$10$Xg9TNE80jMWMm7G66cfOC.n6DI53fuP8kKuL4Wx43Elji.xjuUwcG', '225321639660022_avatar.png', '0', 'ZQtiCQVCOxl4wOvHOOuMWtB08YNYVFCAgLa7Z8atbZ92BgriFqyZvjoR73sU', '2021-12-16 05:07:03', '2021-12-16 05:10:43', 'wanthusiast', 9158782239),
-(79, 'Joffrey Leonard Mapa', 'joffreymapa@gmail.com', '2021-12-27 04:43:25', 1, '$2y$10$d1rPSpP04wxRmCPtJRJDDuClaoYe1wLKubuieclzdPWrITKkyL9Ym', '103241639900840_avatar.png', '0', NULL, '2021-12-19 00:00:41', '2022-01-11 19:56:10', 'joffrey', 9361266345),
-(80, 'Valerie Berbon', 'valerieberbon@gmail.com', NULL, 0, '$2y$10$BnQWnYkU2i/eKyHrI/0AjuA9mRPn9Hduxxy.PfMyO9fxWIUr9QgZO', '1701639903165_avatar.png', '0', NULL, '2021-12-19 00:39:25', '2021-12-19 00:39:25', 'valerieee', 639563526834),
-(81, 'Rose Bert Naraval Cantillo', 'rose1234@gmail.com', NULL, 0, '$2y$10$0bOKU9O2dbLds6flJhtXI.pNT95USqTQmEb8OhzfGbd7j2buykhoy', '170211639903803_avatar.png', '0', 'kW8yLur5Jyb1dh1n9PVcegU2LnKUcZk0CXrj54W9lcqffxdUEAzgqQgKdUdx', '2021-12-19 00:50:04', '2021-12-19 00:50:04', 'berto', 639563526845),
-(83, 'Juan Dela Cruz', 'juandelacruz@gmail.com', '2021-12-19 02:25:48', 0, '$2y$10$fa.vA.044r.U.a.RDWvCkeRdqqTj2LRgcIqbDQX9v0YjRlBiPQuqK', '168791639909360_avatar.png', '0', 'IstU8p8mtxz8TaRKMJOYU8AxXW3VyLqRAalBF1SFNLnEnnFGzswQ2eYwTxDD', '2021-12-19 02:22:41', '2021-12-19 02:25:48', 'juan', 639361266345),
-(84, 'Kaye Trenquitio', 'kaye12345@gmail.com', '2021-12-19 18:50:40', 1, '$2y$10$2GTHkHGi5QWMC9ILmXDAgOxxN6FxspwFwh2ktKOcqop.o.SY4cyeW', '315541639968289_avatar.png', '0', NULL, '2021-12-19 18:44:50', '2022-01-06 20:43:22', 'kayeeee', 639361266365),
-(85, 'Neil Patrick Morano', 'nqweyuijkl@gmail.com', '2022-01-05 19:37:26', 0, '$2y$10$Bj/LDaVnLALgP0P0hyC6FOjP3GMBDtqtFyaVPjugb0wBPKT6vjioy', '46871641440020_avatar.png', '0', NULL, '2022-01-05 19:33:41', '2022-01-05 19:37:26', 'Nqweyuijkl', 9065544933),
-(86, 'Juan Carlos Labajo', 'juancarlos@gmail.com', '2022-01-12 08:58:41', 0, '$2y$10$66THR/.Hm6wVJrXlIpVCpe8YFM04xEBdVU3rrjMp2JyLa7GzjzxTa', '210321642006291_avatar.png', '0', NULL, '2022-01-12 08:51:32', '2022-01-12 08:58:41', 'juanCarlos', 639563527546);
+(57, 'Rose Bert', 'rose@admin.com', '2021-10-16 18:20:58', 1, '$2y$10$omc.WyzC9g32Az.XvnJnAO55xC9Z5JIIAZjxeqtp1emuzBCJxD76i', '8711634437076_avatar.png', '1', 'YfGhKlj0GhO7CzsjJfP1mXmcnAMHyuuWXX7aIpquaP34I1EI1hoz0D6q5ZHv', '2021-10-16 18:17:57', '2021-12-01 09:03:11', 'rose bert', 639361266245),
+(87, 'christian bolofer', 'christbol@gmail.com', '2022-06-16 08:25:08', 0, '$2y$10$GiAaIpGw//BW9.19DKdLW.ApBsMtbNBh3OjipYon9G3dwqrC7xyuu', '30241655394780_avatar.png', '0', 'eHaseUZ3huRtTw7MbmP1ML9gZVaFEMnKq9DHynK70D8AmktyKUffol6OWXZ6', '2022-06-16 07:53:01', '2022-06-16 08:25:08', 'christs', 639365266234);
 
 -- --------------------------------------------------------
 
@@ -768,19 +678,19 @@ ALTER TABLE `houseandlots`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- AUTO_INCREMENT for table `locations`
 --
 ALTER TABLE `locations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `lots`
 --
 ALTER TABLE `lots`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -798,7 +708,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `properties`
 --
 ALTER TABLE `properties`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT for table `reports`
@@ -816,7 +726,7 @@ ALTER TABLE `statuses`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `verified_users`
