@@ -1,0 +1,23 @@
+#map{
+    height: 500px;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#mapCanvas{
+    height: 500px;
+    width: 100%;
+}
+#myMap{
+    height: 500px;
+    width: 100%;
+    /* position: center; */
+}
+
+#mapLocations{
+    height: 500px;
+    width: 100%;
+}
+

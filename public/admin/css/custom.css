@@ -1,0 +1,31 @@
+.category-image{
+    width: 70px;
+    height: 70px;
+}
+.product-image{
+    width: 70px;
+    height: 70px;
+}
+.form-select{
+    display: block; 
+    width: 100%;
+    padding: .375rem 2.25rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    background-color: rgb(241, 234, 221, 98);
+    background-repeat: no-repeat; 
+    /* background-position: right .75rem center; */
+    /* background-size: 16px 12px; */
+    /* border: 1px solid #ced4da; */
+     
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.slider-img{
+    font-size: large;
+    background-color: rgba(187, 179, 179, 0.589);
+}

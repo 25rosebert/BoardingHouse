@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCam</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    <style>
+        /* a{
+            color: white;
+            background-color: red;
+            border-radius: 50px;
+            padding: 10px;
+            text-decoration: none;
+        }
+        canvas{
+            display: none;
+        } */
+        #camera{
+            width: 350px;
+            height: 350px;
+            border: 1px solid black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- <video id="webCam" autoplay playsinline width="800" height="600" src=""></video>
+    <canvas id="canvas"></canvas>
+    <a download onclick="TakePicture()">CAPTURE</a>
+</body>
+
+<script>
+    const webCamElement = document.getElementById("webCam");
+    const canvasElement = document.getElementById("canvas");
+    const webCam = new WebCam(webCamElement, "user", canvasElement);
+    webcam.start();
+    
+    function TakePicture(){
+        let picture = webcam.snap();
+        document.querySelector("a").href = picture;
+    }
+</script> -->
+
+<div id="camera"></div>
+<button onclick="snap()">Capture</button>
+<div id="result"></div>
+</body>
+
+<!-- <script>
+    Webcam.set({
+        width:350,
+        height: 350,
+        image_format:'jpeg',
+        jpeg_quality:90
+    })
+    Webcam.attach("#camera")
+
+    function snap(){
+        Webcam.Snap(function(data_uri){
+            document.getElementById('result').innerHTML =
+            '<img src="'+$data_uri+'"/>';
+            
+        })
+    }
+
+</script> -->
+<script>
+    Webcam.set({
+        width:350,
+        height: 350,
+        image_format:'jpeg',
+        jpeg_quality:90
+    })
+    Webcam.attach("#camera")
+
+    function snapshot(){
+        Webcam.snap(function(data_uri){
+            
+            document.getElementById('result').innerHTML =
+            '<img src="'+$data_uri+'"/>';
+            
+        })
+    }
+
+</script>
+</html>

@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+/*  CSS VARIABLES */
+:root {
+  --color-first: #669135;
+  --color-second: #1a250e;
+  --color-third: #e6f1da;
+  --color-fourth: #f3f8ec;
+  --color-white: #fff;
+  /* Font Size */
+  --text-large: 50px;
+  --text-medium: 40px;
+  --text-small: 15px;
+  --text-regular: 13px;
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  /* Box Shadow */
+  --box-shadow-main: 0px 15px 30px rgba(26, 37, 14, 0.1);
+  /* Border radius */
+  --border-radius: 5px;
+  /* transition */
+  --animate: all 0.3s ease-in-out;
+}
+/*
+html,body {
+	height: 100%;
+}
+
+body.my-login-page {
+	background-color: #f7f9fb;
+	font-size: 14px;
+}
+
+.my-login-page .brand {
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 40px auto;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+	position: relative;
+	z-index: 1;
+}
+
+.my-login-page .brand img {
+	width: 100%;
+}
+
+.my-login-page .card-wrapper {
+	width: 400px;
+}
+
+.my-login-page .card {
+	border-color: transparent;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+.my-login-page .card.fat {
+	padding: 10px;
+}
+
+.my-login-page .card .card-title {
+	margin-bottom: 30px;
+}
+
+.my-login-page .form-control {
+	border-width: 2.3px;
+}
+
+.my-login-page .form-group label {
+	width: 100%;
+}
+
+.my-login-page .btn.btn-block {
+	padding: 12px 10px;
+}
+
+.my-login-page .footer {
+	margin: 40px 0;
+	color: #888;
+	text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+	.my-login-page .card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.my-login-page .card.fat {
+		padding: 0;
+	}
+
+	.my-login-page .card.fat .card-body {
+		padding: 15px;
+	}
+}
+*/
+
+/* new */
+/* login */
+body{
+	font-family: 'Merriweather', sans-serif;
+	font-size: 16px;
+	background: #fff;
+	color:#fff;
+  }
+  .login-title, .reg-title{
+	  color: #3f5821;
+  }
+  .login-title{
+      font-size: 37px;
+  }
+  .login-container{
+	background:var(--color-white);
+	border-radius: 40px;
+	box-shadow: 5px 5px 30px #283a14,
+			   -5px -5px 10px #91cc4e;
+	width: 600px;
+	margin-left: 390px;
+	padding-top: 2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-flow: wrap;
+  }
+  .login-form{
+	margin: auto;
+	width: 370px;
+	padding: 15px;
+	max-width: 100%;
+	
+  }
+  .login-form .form-control{
+	font-size: 15px;
+	min-height: 48px;
+	font-weight: 500;
+  }
+  .login-form a{
+	text-decoration: none;
+	color:#666;
+  }
+  .login-form a:hover{
+	color:var(--color-first);
+  }
+  .forgot-link{
+	font-size: 13px;
+  }
+  
+  .form-control:focus{
+	border-color:var(--color-first);
+	box-shadow: 0 0 0 0.2rem #91cc4e;
+  }
+  .btn-custom{
+	background: var(--color-first);
+	border-color:var(--color-first);
+	color:#fff;
+	font-size: 15px;
+	font-weight: 600;
+	min-height: 48px;
+	display: block; 
+	width: 100%;
+  }
+  .btn-custom:focus,
+  .btn-custom:hover,
+  .btn-custom:active,
+  .btn-custom:active:focus{
+	background: var(--color-second);
+	border-color: var(--color-second);
+	color:#fff;
+  }
+  .btn-custom:focus{
+	box-shadow: 0 0 0 0.2rem rgba(114,61,190,.25);
+  }
+  .remember-me, .p, .agree{
+	  color: #283a14;
+  }
+  @media (max-width:900px){
+	  .login-container{
+		  width: 70%;
+		  margin-left: 20%;
+	  }
+      .login-title{
+          font-size: 2rem;
+      }
+  }
+  /* register */
+  .reg-container{
+	background:var(--color-white);
+	border-radius: 40px;
+	box-shadow: 5px 5px 30px #283a14,
+			   -5px -5px 10px #91cc4e;
+	width: 600px;
+	margin-left: 440px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-flow: wrap;
+	padding-top: 3rem;
+  }
+  /* .login-form{
+	margin: auto;
+	width: 370px;
+	padding: 15px;
+	max-width: 100%;
+  } */
+  @media(max-width:900px){
+	  .reg-container{
+	  width: 75%;
+	  margin-left: 15%;
+	  }
+  }

@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    color:blueviolet; 
+}
+
+.navbar ul{
+margin: 0;
+padding: 0;
+/* display: flex; */
+}
+
+.navbar li{
+    list-style: none;
+}
+ul, li .nav-link{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+

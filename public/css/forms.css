@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+/*  CSS VARIABLES */
+:root {
+  --color-first: #669135;
+  --color-second: #1a250e;
+  --color-third: #e6f1da;
+  --color-fourth: #f3f8ec;
+  --color-fifth:#3f5821;
+  --color-white: #fff;
+  /* Font Size */
+  --text-large: 50px;
+  --text-medium: 40px;
+  --text-small: 15px;
+  --text-regular: 13px;
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  /* Box Shadow */
+  --box-shadow-main: 0px 15px 30px rgba(26, 37, 14, 0.1);
+  /* Border radius */
+  --border-radius: 5px;
+  /* transition */
+  --animate: all 0.3s ease-in-out;
+}
+
+body{
+	font-family: 'Merriweather', sans-serif;
+  }
+  .form-control:focus{
+	border-color:var(--color-first);
+	box-shadow: 0 0 0 0.2rem #91cc4e;
+  }
+  .container{
+      width: 125px;
+  }

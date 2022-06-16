@@ -1,0 +1,25 @@
+.card{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);     
+}
+.a{        
+    transition: transform .6s;
+}
+.text{        
+    transition: transform .6s;
+}
+a .homie:hover{
+    z-index:100;
+    background-color:mediumturquoise;
+    transform: scale(1.1);
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+.homie:hover{
+    z-index:100;
+    background-color:mediumturquoise;
+    transform: scale(1.1);
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
