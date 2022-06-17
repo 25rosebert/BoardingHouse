@@ -23,3 +23,26 @@ IF DOWNLOADED FROM GITHUB
 11. open your text editor and go to terminal. make sure that you are in the right directory. then run the command:
     php artisan serve
 
+
+CREATE A VIRTUAL HOST TO USED THE FEATURE OF GOOGLE MAP API
+1. go to C:\xampp\apache\conf\extra and open httpd-vhost.conf  on your text editor.
+
+2. then add the following code below: then save. 
+        <VirtualHost *:80>
+            ServerAdmin webmaster@propertyfinder.net
+            DocumentRoot "C:/xampp/htdocs/Boardinghouse/public"
+            ServerName propertyfinder.net
+            ErrorLog "logs/dummy-host2.example.com-error.log"
+            CustomLog "logs/dummy-host2.example.com-access.log" common
+        </VirtualHost>
+
+3. press windows + r on your computer and type notepad, or simply go to the search bar and type notepad, make sure to run it as administrator.
+4. after opening notepad, go to file, open and go to C:\Windows\System32\drivers\etc  then choose all files to display all the files. 
+then open the file named hosts and add these following text:
+        127.0.0.1       localhost
+        127.0.0.1       propertyfinder.net
+then save. 
+5. refresh the xampp apache by clicking stop and start it again. 
+6. then go to the browser and type propertyfinder.net 
+
+
