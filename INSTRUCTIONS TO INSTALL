@@ -1,0 +1,25 @@
+Procedures in Installing the System
+
+IF DOWNLOADED FROM GITHUB   
+1. Clone GitHub repo for this project locally. Run the command below:
+    git clone https://github.com/25rosebert/BoardingHouse.git
+2. cd into your project
+    cd projectname
+3. Install Composer dependencies
+    composer install
+4. Install NPM Dependencies
+    npm install
+5. Create a copy of your .env file
+    cp .env.example .env
+6. Generate an app encryption key
+    php artisan key:generate
+7. Create an empty database for our application
+    go to .env file and rename the database, rename it to laravel_emap 
+8. migrate the database migrations: 
+    php artisan migrate
+        but in our case we will not going to use the database migrations; we just simply use the downloaded database that are located in the database folder.
+9. Create a database in phpmyadmin named "laravel_emap", it is important that the name of the database inside the .env file is same name as the one we will create.
+10. go to import tab and import the sql file inside the database folder in our app. 
+11. open your text editor and go to terminal. make sure that you are in the right directory. then run the command:
+    php artisan serve
+
